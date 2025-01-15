@@ -9,6 +9,9 @@ from crewai.project import CrewBase, agent, crew, task
 class Chalk():
 	"""Chalk crew"""
 
+
+
+
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
