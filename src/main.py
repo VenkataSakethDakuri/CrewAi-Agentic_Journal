@@ -5,6 +5,9 @@ import os
 from dotenv import load_dotenv
 from crew import Chalk
 
+
+from crew import Chalk1
+
 load_dotenv()
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
@@ -17,12 +20,30 @@ warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
 def run():
     """
-    Run the crew.
+    Multi-round conversation with journaling.
     """
-    inputs = {
+    conversation_crew = Chalk().crew()
+    journal_crew = Chalk1().crew()
+
+    user_messages = []
+
+    
+
+    while True:
+        user_message = input("You: ")
+        if user_message.lower() in ['end', 'stop', 'bye']:      
+            print("Ending the conversation. Summarizing and saving...")
+            break
         
-    }
-    Chalk().crew().kickoff(inputs=inputs)
+        user_messages.append(user_message)
+
+        # Kickoff conversation task
+        conversation_crew.kickoff(inputs={'user_input': user_message})
+    
+
+    
+    journal_crew.kickoff(inputs={'user_messages': user_messages})
+    user_messages.clear()
 
 run()
 
