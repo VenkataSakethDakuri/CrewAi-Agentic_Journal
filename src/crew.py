@@ -1,6 +1,18 @@
 from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 
+from crewai.memory.long_term.long_term_memory import LongTermMemory
+from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
+
+
+# embeddings = {
+# 	"provider": "openai",
+# 	"model": "text-embedding-ada-002",
+# 	"dimension": 1536,
+# }
+
+
+
 # If you want to run a snippet of code before or after the crew starts, 
 # you can use the @before_kickoff and @after_kickoff decorators
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
@@ -8,8 +20,6 @@ from crewai.project import CrewBase, agent, crew, task
 @CrewBase
 class Chalk():
 	"""Chalk crew"""
-
-
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
@@ -57,6 +67,10 @@ class Chalk():
 			process=Process.sequential,
 			memory=True,
 			verbose=True,
+			long_term_memory = LongTermMemory(
+       storage =LTMSQLiteStorage(db_path="/Users\DELL\Desktop\VS CODE\langflow\Agentic_Journal\storage.db")
+    ),
+			
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)
 
@@ -66,8 +80,6 @@ class Chalk():
 @CrewBase
 class Chalk1():
 	"""Chalk crew"""
-
-
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
 	# Tasks: https://docs.crewai.com/concepts/tasks#yaml-configuration-recommended
@@ -87,6 +99,7 @@ class Chalk1():
 		return Agent(
 			config=self.agents_config['journal_agent'],
 			verbose=True,
+			memory=True,
 		)
 
 	
@@ -95,6 +108,7 @@ class Chalk1():
 		return Task(
 			config=self.tasks_config['journaling'],
 			agent = self.journal_agent(),
+			memory=True,
 		)
 
 	@crew
@@ -109,5 +123,10 @@ class Chalk1():
 			process=Process.sequential,
 			memory=True,
 			verbose=True,
+			long_term_memory = LongTermMemory(
+       storage =LTMSQLiteStorage(db_path="/Users\DELL\Desktop\VS CODE\langflow\Agentic_Journal\storage.db")
+    ),
+			
+
 			# process=Process.hierarchical, # In case you wanna use that instead https://docs.crewai.com/how-to/Hierarchical/
 		)

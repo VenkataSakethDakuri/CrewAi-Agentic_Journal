@@ -14,9 +14,9 @@
 
 conversation:
   description: >
-    Engage in the friendly conversation with the user and respond to the user. Use the records in the journal.txt file as context sometimes in the cnoversation.
+    Engage in the friendly conversation with the user and respond to the user. 
     Use some emojis here and there to make the conversation more engaging. Till the use says bye or stop something similar continue the conversation.
-    The user input is {user_input} and the journal records are stored in journal.txt.
+    The user input is {user_input} and the journal records are stored in database called storage.
   expected_output: >
     A meaningful conversation with the user.
   agent: conversation_agent

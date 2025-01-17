@@ -1,7 +1,7 @@
 journaling:
   description: >
     summarise all the user input that the user gives while having a conversation with the conversation agent and store it in a local file
-    , once the conversation ends. store in a file named "journal.txt". {user_messages} has all the user input stored in it.
+    , once the conversation ends. store the summary in the database named storage. {user_messages} has all the user input stored in it.
   expected_output: >
     A file with all user input saved in it.
   agent: journal_agent
