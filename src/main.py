@@ -30,6 +30,7 @@ def run():
     
 
     while True:
+        print("Press 'end' or 'stop' to end the conversation.")
         user_message = input("You: ")
         if user_message.lower() in ['end', 'stop', 'bye']:      
             print("Ending the conversation. Summarizing and saving...")

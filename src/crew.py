@@ -86,6 +86,7 @@ class Chalk1():
 	agents_config = 'config/agents1.yaml'
 	tasks_config = 'config/tasks1.yaml'
 
+
 	# If you would like to add tools to your agents, you can learn more about it here:
 	# https://docs.crewai.com/concepts/agents#agent-tools
 
@@ -116,7 +117,6 @@ class Chalk1():
 		"""Creates the Chalk crew"""
 		# To learn how to add knowledge sources to your crew, check out the documentation:
 		# https://docs.crewai.com/concepts/knowledge#what-is-knowledge
-
 		return Crew(
 			agents=self.agents, # Automatically created by the @agent decorator
 			tasks=self.tasks, # Automatically created by the @task decorator
