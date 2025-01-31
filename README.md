@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>AI Conversational Agent with Journaling</title>
+   
 </head>
 <body>
 
