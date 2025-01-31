@@ -1,4 +1,6 @@
-🎙️ AI Conversational Agent with Journaling 📝
+<h1>🎙️ AI Conversational Agent with Journaling 📝</h1>
+
+
 This project is a voice-based AI assistant powered by CrewAI. It allows users to have personalized conversations with an AI, which remembers previous interactions and stores conversation summaries for future reference.
 
 🚀 Features
@@ -43,18 +45,32 @@ Speak when prompted. Say "stop" to end the conversation.
 
 🏗️ Technical Details
 Agents (agents.yaml)
+
 Conversation Agent: Engages in hyper-personalized chats using past records.
+
 Journal Agent: Summarizes and stores conversations.
+
 Tasks (tasks.yaml)
+
 Conversation Task: Manages real-time discussions.
+
 Journaling Task: Saves conversation summaries.
+
 Crew Setup (crew.py)
+
 Chalk Crew 🗣️: Manages live conversations.
+
 Chalk1 Crew 📖: Handles journaling and memory storage.
+
 Main Execution (main.py)
+
 Speech-to-Text (Whisper API)
+
 AI Response Handling (CrewAI)
+
 Text-to-Speech (TTS API)
+
 Journaling with SQLite Storage
+
 🤝 Contributing
 Feel free to submit issues and pull requests.
