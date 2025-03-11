@@ -6,7 +6,7 @@ import tempfile
 import sounddevice as sd
 import numpy as np
 import wave
-from crew import Chalk, Chalk1
+from crew import Conversation, Journal
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -83,8 +83,8 @@ def speak(text):
 # Function to manage conversation flow with the AI crew
 def run_voice_conversation():
     """Manage a voice-based conversation with AI crew using STT and TTS."""
-    conversation_crew = Chalk().crew()
-    journal_crew = Chalk1().crew()
+    conversation_crew = Conversation().crew()
+    journal_crew = Journal().crew()
     
     user_messages = []
     speak("Hey! How are you? Say 'stop' to end the conversation.")
