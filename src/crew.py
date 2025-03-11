@@ -18,7 +18,7 @@ from crewai.memory.storage.ltm_sqlite_storage import LTMSQLiteStorage
 # https://docs.crewai.com/concepts/crews#example-crew-class-with-decorators
 
 @CrewBase
-class Chalk():
+class Conversation():
 	"""Chalk crew"""
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
@@ -78,7 +78,7 @@ class Chalk():
 
 
 @CrewBase
-class Chalk1():
+class Journal():
 	"""Chalk crew"""
 	# Learn more about YAML configuration files here:
 	# Agents: https://docs.crewai.com/concepts/agents#yaml-configuration-recommended
