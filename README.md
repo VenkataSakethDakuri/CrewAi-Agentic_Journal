@@ -75,8 +75,8 @@ python main.py
 
 <h3>Crew Setup (crew.py)</h3>
 <ul>
-    <li><strong>Chalk Crew 🗣️</strong> - Manages live conversations.</li>
-    <li><strong>Chalk1 Crew 📖</strong> - Handles journaling and memory storage.</li>
+    <li><strong>Conversation Crew 🗣️</strong> - Manages live conversations.</li>
+    <li><strong>Journal Crew 📖</strong> - Handles journaling and memory storage.</li>
 </ul>
 
 <h3>Main Execution (main.py)</h3>
