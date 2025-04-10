@@ -41,7 +41,14 @@ git clone https://github.com/your-username/ai-conversation-journal.git
 cd ai-conversation-journal
 </pre>
 
-<h3>2️⃣ Set up environment variables:</h3>
+
+ <h3>2️⃣ Install dependencies:</h3>
+ <pre>
+ pip install -r requirements.txt
+ </pre>
+ 
+
+<h3>3️⃣ Set up environment variables:</h3>
 <p>Create a <code>.env</code> file and add:</p>
 <pre>
 OPENAI_API_KEY=your_openai_api_key
