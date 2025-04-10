@@ -37,8 +37,7 @@ CrewAI handles agent orchestration, ensuring a smooth experience.
 
 <h3>1️⃣ Clone the repository:</h3>
 <pre>
-git clone https://github.com/your-username/ai-conversation-journal.git
-cd ai-conversation-journal
+git clone https://github.com/VenkataSakethDakuri/CrewAi-Agentic_Journal
 </pre>
 
 
